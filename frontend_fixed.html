@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factora AI | Truth Unveiled</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;700&family=Montserrat:wght@400;700&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #141414;
+            --gold: #b19cd9;
+            --lavender: #FFFFFF;
+            --white: #FFFFFF;
+            --border: rgba(255, 255, 255, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            background: var(--bg);
+            color: var(--lavender);
+            font-family: 'Montserrat', sans-serif;
+            height: 100%;
+            width: 100vw;
+            overflow-y: auto;
+            display: flex;
+            scrollbar-width: thin;
+            scrollbar-color: #333 transparent;
+        }
+
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.12;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 100vh;
+            background: rgba(8, 8, 8, 0.95);
+            border-right: 1px solid var(--border);
+            transition: width 0.3s ease;
+            overflow: hidden;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+        }
+
+        .sidebar:hover {
+            width: 220px;
+        }
+
+        .sidebar li p {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .sidebar:hover li p {
+            opacity: 1;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 100px 0 0 0;
+        }
+
+        .nav-links li {
+            padding: 20px 25px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-links li:hover {
+            opacity: 1;
+            background: rgba(177, 156, 217, 0.12);
+        }
+
+        .nav-links li p {
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* .sidebar.expanded li p { opacity: 1; } - REMOVED for pure hover */
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 60px;
+            right: 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(25px);
+            z-index: 900;
+            border-bottom: 1px solid var(--border);
+            transition: left 0.3s ease;
+        }
+
+        body:has(.sidebar:hover) .header {
+            left: 220px;
+        }
+
+        .tagline {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Montserrat';
+            font-size: 2.4rem;
+            background: linear-gradient(135deg, var(--gold), #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: 1.5px solid var(--gold);
+            background: transparent;
+            color: var(--gold);
+            border-radius: 28px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(177, 156, 217, 0.4);
+        }
+
+        /* Main Chat Area */
+        .main {
+            flex: 1;
+            margin-left: 60px;
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            transition: margin-left 0.3s ease;
+        }
+
+        body:has(.sidebar:hover) .main {
+            margin-left: 220px;
+        }
+
+        /* Logo Hero */
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            text-align: center;
+            opacity: 1;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .logo-container.hidden {
+            opacity: 0;
+            transform: translate(-50%, -60%);
+            visibility: hidden;
+        }
+
+        .logo-container img {
+            width: 240px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 12px 40px rgba(177, 156, 217, 0.5));
+        }
+
+        .logo-container h1 {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 8px;
+            color: var(--gold);
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 0 12px 40px rgba(177, 156, 217, 0.6);
+        }
+
+        /* Chat Messages */
+        #chat-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding-bottom: 120px;
+        }
+
+        .message {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: messageSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            animation-fill-mode: both;
+        }
+
+        .message:nth-child(even) {
+            animation-delay: 0.1s;
+        }
+
+        .message:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        @keyframes messageSlideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-content {
+            padding: 24px 28px;
+            border-radius: 28px;
+            line-height: 1.7;
+            backdrop-filter: blur(25px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            max-width: 85%;
+            word-wrap: break-word;
+        }
+
+        .ai-message {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .ai-message .message-content {
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.15), rgba(139, 92, 246, 0.12));
+            border: 1px solid rgba(177, 156, 217, 0.4);
+            border-top-left-radius: 12px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .ai-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .user-message {
+            margin-left: auto;
+        }
+
+        .user-message {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .user-message .message-content {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+            color: #ffffff;
+            font-weight: 500;
+            border-top-right-radius: 12px;
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.4);
+            max-width: none;
+            margin-right: 40px;
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Verdict & Stats Classes */
+        .verdict-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            padding: 16px 28px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+            display: inline-block;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .verdict-real {
+            background: rgba(74, 222, 128, 0.3);
+            color: #4ade80;
+            border: 2px solid #4ade80;
+        }
+
+        .verdict-fake {
+            background: rgba(248, 113, 113, 0.3);
+            color: #f87171;
+            border: 2px solid #f87171;
+        }
+
+        .verdict-suspicious {
+            background: rgba(250, 204, 21, 0.3);
+            color: #facc15;
+            border: 2px solid #facc15;
+        }
+
+        .category-tag {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--gold);
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 20px 0;
+            display: inline-block;
+            backdrop-filter: blur(12px);
+        }
+
+        .stat-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            border: 1px solid rgba(177, 156, 217, 0.3);
+            margin: 16px 0;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: var(--gold);
+            min-width: 100px;
+        }
+
+        .stat-bar {
+            flex: 1;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .stat-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stat-fill.manipulation {
+            background: linear-gradient(90deg, #f87171, #ef4444);
+        }
+
+        .stat-fill.credibility {
+            background: linear-gradient(90deg, #4ade80, #22c55e);
+        }
+
+        .stat-value {
+            font-weight: 800;
+            color: var(--gold);
+            font-family: 'Space Mono', monospace;
+            min-width: 50px;
+            text-align: right;
+        }
+
+
+        .input-section {
+            position: absolute;
+            bottom: 0;
+            left: 60px;
+            right: 0;
+            padding: 20px 20px 32px 20px;
+
+            border-top: 1px solid var(--border);
+            z-index: 950;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: left 0.3s ease;
+        }
+
+        /* Sidebar hover adaptation */
+        body:has(.sidebar:hover) .input-section {
+            left: 220px;
+        }
+
+        /* Form: centered with max-width constraint */
+        #chat-form {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container: flex relative for button positioning */
+        .input-container {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Textarea: full width of container */
+        #main-search {
+            width: 750px;
+            min-height: 30px;
+            max-height: 90%;
+            padding: 12px 50px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--gold);
+            border-radius: 24px;
+            color: white;
+            font-size: 14px;
+            font-family: inherit;
+            outline: none;
+            backdrop-filter: blur(15px);
+            resize: none;
+            overflow: hidden;
+            line-height: 1.4;
+            transition: all 0.3s ease;
+        }
+
+        #main-search::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        #main-search:focus,
+        #main-search:hover {
+            border-color: rgba(177, 156, 217, 0.8);
+            box-shadow: 0 0 0 4px rgba(177, 156, 217, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Send button: positioned inside input */
+        .send-btn {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), #d4af37);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(177, 156, 217, 0.4);
+        }
+
+        .send-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: #1a1a1a;
+            transition: transform 0.3s ease;
+        }
+
+        .send-btn:hover:not(:disabled) {
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 8px 30px rgba(177, 156, 217, 0.6);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .send-btn.loading svg {
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        /* Disclaimer: centered below */
+        .disclaimer-text {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            opacity: 0.9;
+            font-style: italic;
+            max-width: 650px;
+        }
+
+        /* Hidden state */
+        .input-section.hidden {
+            opacity: 0;
+            transform: translateY(100%);
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .input-section {
+                left: 0;
+                padding: 20px;
+            }
+
+            body:has(.sidebar:hover) .input-section {
+                left: 0;
+            }
+
+            #chat-form {
+                max-width: none;
+            }
+        }
+
+
+        /* Section Styles */
+        .section {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            min-height: calc(100vh - 80px);
+            scroll-behavior: smooth;
+            padding: 32px 40px;
+        }
+
+        .section.active {
+            display: flex;
+        }
+
+        .protocol-text-box {
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            line-height: 1.8;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(25px);
+            text-align: left;
+        }
+
+        .protocol-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .protocol-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .protocol-number {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            max-width: 900px;
+            max-height: 90vh;
+            width: 100%;
+            background: rgba(20, 20, 20, 0.98);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(30px);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 30px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-close {
+            font-size: 2rem;
+            color: var(--gold);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .modal-close:hover {
+            background: rgba(177, 156, 217, 0.2);
+            transform: scale(1.1);
+        }
+
+        #modal-full-content {
+            margin-top: 24px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .saved-article-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .saved-article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(177, 156, 217, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                left: -70px;
+                position: fixed;
+            }
+
+            .main,
+            .header,
+            .input-section {
+                left: 0;
+                margin-left: 0;
+            }
+
+            .header {
+                padding: 0 24px;
+            }
+
+            .main {
+                padding: 24px 20px;
+                height: calc(100vh - 80px - 150px);
+            }
+
+            .input-section {
+                padding: 24px 20px;
+            }
+
+            .tagline {
+                font-size: 1.8rem;
+            }
+
+            .logo-container img {
+                width: 180px;
+            }
+
+            .logo-container h1 {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Sidebar (decorative, disabled switching) -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li onclick="showSection('chat')"><span>🏠</span>
+                <p>Chat</p>
+            </li>
+            <li onclick="showSection('saved')"><span>🔖</span>
+                <p>Saved</p>
+            </li>
+
+            <li onclick="showSection('guide')"><span>📖</span>
+                <p>Guide</p>
+            </li>
+            <li onclick="showSection('educational')"><span>🖋️</span>
+                <p>Educational</p>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Fixed Header -->
+    <header class="header">
+        <div class="tagline">Dissecting the Fabric of Reality</div>
+        <div class="header-actions">
+            <button class="btn" onclick="newChat()">New Chat</button>
+            <button class="btn" onclick="saveChat()">Save</button>
+        </div>
+    </header>
+
+    <!-- Main Chat -->
+    <main class="main">
+        <section id="chat" class="section active">
+            <div class="logo-container" id="logo-container">
+                <img src="Logo design for FACTORA AI.png" alt="Factora AI Logo">
+                <h1>FACTORA AI</h1>
+            </div>
+            <div id="chat-container"></div>
+        </section>
+
+        <section id="saved" class="section">
+            <h2>Saved Articles</h2>
+            <div class="protocol-text-box" id="saved-container">
+                <p style="text-align: center; opacity: 0.7;">Click "Analyze" on news, then "Save" to see articles here.
+                    📰</p>
+            </div>
+            <div style="margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--border); text-align: center;">
+                <strong style="color: var(--gold); font-size: 1.3rem;">Ready to dissect reality?</strong>
+                <p><button class="btn" onclick="showSection('chat')"
+                        style="margin-top: 12px; background: var(--gold); color: #000;">Start Analyzing →</button></p>
+            </div>
+        </section>
+
+
+
+        <section id="guide" class="section">
+            <h2>How It Works</h2>
+            <div class="protocol-text-box">
+                <ul class="protocol-list">
+                    <li class="protocol-item">
+                        <span class="protocol-number">1</span>
+                        <strong>Factora AI Overview</strong>
+                        <p>Factora AI is your personal truth detector. Trained on millions of news patterns, it dissects
+                            articles for manipulation techniques, source credibility, and factual signals. Backend
+                            powered by Django analyzer using NLP models for real-time verdicts.</p>
+                    </li>
+                    <li class="protocol-item">
+                        <span class="protocol-number">2</span>
+                        <strong>Analysis Process</strong>
+                        <p><strong>Step 1:</strong> You paste news → Frontend sends to /analyze/ API.</p>
+                        <p><strong>Step 2:</strong> Backend (news_analyzer/views.py) processes text: source matching,
+                            lang analysis, credibility scoring.</p>
+                        <p><strong>Step 3:</strong> Returns verdict, scores, reasons, category in JSON.</p>
+                        <p><strong>Step 4:</strong> UI renders verdict badge, stat bars, explanations.</p>
+                    </li>
+                    <li class="protocol-item">
+                        <span class="protocol-number">3</span>
+                        <strong>Verdict Types</strong>
+                        <p>• <strong>Real</strong> (Green): High credibility, reputable sources, factual lang. 🟢</p>
+                        <p>• <strong>Likely Real</strong>: Good signals but some uncertainty. 🟡</p>
+                        <p>• <strong>Suspicious</strong>: Mixed signals, watch scores. ⚠️</p>
+                        <p>• <strong>Fake</strong> (Red): Manipulation detected. 🔴</p>
+                    </li>
+                    <li class="protocol-item">
+                        <span class="protocol-number">4</span>
+                        <strong>◇ Manipulation Score (Detailed)</strong>
+                        <p><strong>Detects:</strong> Emotional triggers ("crisis!"), urgency ("now!"), exaggeration
+                            ("biggest ever"), fake authority ("experts say").</p>
+                        <p><strong>Example:</strong> "SHOCKING: World ends tomorrow!" → 95% manipulation.</p>
+                        <p><strong>0-30%:</strong> Clean • <strong>70%+:</strong> Highly suspect.</p>
+                    </li>
+                    <li class="protocol-item">
+                        <span class="protocol-number">5</span>
+                        <strong>◇ Credibility Score (Detailed)</strong>
+                        <p><strong>Verifies:</strong> Known outlets (BBC, Reuters), fact-check links, balanced phrasing.
+                        </p>
+                        <p><strong>Example:</strong> "Per Reuters: ..." → 92% credibility.</p>
+                        <p><strong>70%+:</strong> Trustworthy • <strong>
+                                <30%:< /strong> Dubious source.</p>
+                    </li>
+                    <li class="protocol-item">
+                        <span class="protocol-number">6</span>
+                        <strong>Primary Signal + Category</strong>
+                        <p>Flags top issue: "Emotional Bait", "Source Unknown", "Exaggeration". Category: Politics,
+                            Health, Tech, etc.</p>
+                    </li>
+                    <li class="protocol-item">
+                        <span class="protocol-number">7</span>
+                        <strong>Usage Tips</strong>
+                        <p>• Paste full article or headline + link.</p>
+                        <p>• Save reliable analysis (⭐ button).</p>
+                        <p>• Educational mode teaches patterns.</p>
+                        <p>• Always cross-verify critical news.</p>
+                    </li>
+                    <li class="protocol-item">
+                        <span class="protocol-number">8</span>
+                        <strong>Educational Mode</strong>
+                        <p>Coming: Interactive lessons, daily challenges, leaderboard. Learn to spot fakes like a pro!
+                            🎓</p>
+                    </li>
+                    <li class="protocol-item"
+                        style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
+                        <strong style="color: var(--gold); font-size: 1.3rem;">Ready to dissect reality?</strong>
+                        <p><button class="btn" onclick="showSection('chat')"
+                                style="margin-top: 12px; background: var(--gold); color: #000;">Start Analyzing
+                                →</button></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="educational" class="section">
+            <h2>Educational Mode</h2>
+            <div class="protocol-text-box">
+                <p><strong style="color: var(--gold);">Purpose:</strong> Awareness and learning mode for students or
+                    curious users.</p>
+                <p><strong style="color: var(--gold);">What It is:</strong> FACTORA AI's educational mode teaches how to
+                    correctly assess news.</p>
+                <p><strong style="color: var(--gold);">Features:</strong></p>
+                <ul>
+                    <li>• Explains fake news and how it spreads with examples.</li>
+                    <li>• Highlights misinformation patterns (emotional, exaggeration, urgency, fake authorities).</li>
+                    <li>• Teaches verification steps.</li>
+                    <li>• Daily news for students + verification leaderboard (game-like learning).</li>
+                </ul>
+                <p><strong style="color: var(--gold);">Coming Soon!</strong></p>
+                <div
+                    style="margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--border); text-align: center;">
+                    <strong style="color: var(--gold); font-size: 1.3rem;">Ready to dissect reality?</strong>
+                    <p><button class="btn" onclick="showSection('chat')"
+                            style="margin-top: 12px; background: var(--gold); color: #000;">Start Analyzing →</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Saved Article Detail Modal -->
+    <div id="article-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-news-id" style="color:var(--gold);font-family:'Cinzel',serif;font-size:1.8rem;">Loading...
+                </h3>
+                <button onclick="closeModal()" class="modal-close" title="Close">×</button>
+            </div>
+            <div id="modal-analysis" style="padding: 0 30px 30px;"></div>
+            <div id="modal-full-content"></div>
+        </div>
+    </div>
+
+    <!-- Fixed Bottom Input -->
+    <div class="input-section">
+        <div id="chat-input-container">
+            <div class="input-container">
+                <textarea id="main-search" placeholder="Paste news article, say 'hi', or ask about 'Founders'..."
+                    oninput="handleInput(this)" onkeydown="handleEnter(event)"></textarea>
+                <button class="send-btn" type="button" id="send-btn" onclick="analyzeNews(); return false;">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="disclaimer-text">
+            FACTORA AI analyzes patterns. Verify important information independently.
+        </div>
+    </div>
+
+    <script>
+        // Init
+        // Sidebar hover handled by CSS
+
+        function showSection(id) {
+            console.log('Switched to section:', id);
+
+            // Switch sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            const targetSection = document.getElementById(id);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                targetSection.scrollTop = 0;
+            }
+
+            // Handle search bar visibility
+            const inputSection = document.querySelector('.input-section');
+            if (id === 'chat') {
+                inputSection.classList.remove('hidden');
+                document.getElementById('main-search').focus();
+            } else if (['saved', 'guide', 'educational'].includes(id)) {
+                inputSection.classList.add('hidden');
+            }
+
+            // Reset chat if switching to chat
+            if (id === 'chat') {
+                newChat();
+            }
+            // Load saved if switching to saved
+            if (id === 'saved') {
+                loadSavedArticles();
+            }
+
+            // Persist section only (no sidebar state)
+            localStorage.setItem('activeSection', id);
+        }
+
+        async function loadSavedArticles() {
+            const container = document.getElementById('saved-container');
+            container.innerHTML = '<p style="text-align:center;opacity:0.6;">Loading...</p>';
+            try {
+                const res = await fetch('http://127.0.0.1:8000/saved-articles/');
+                if (!res.ok) throw new Error();
+                const data = await res.json();
+                renderSavedArticles(data.articles || []);
+            } catch (e) {
+                container.innerHTML = '<p style="text-align:center;color:#f87171;">Connect backend first<br><small>cd factora_backend && python manage.py runserver</small></p>';
+            }
+        }
+
+        function renderSavedArticles(articles) {
+            const container = document.getElementById('saved-container');
+            if (articles.length === 0) {
+                container.innerHTML = '<p style="text-align:center;opacity:0.6;">No saved articles. Analyze news & save!</p>';
+                return;
+            }
+            let html = `<h3 style="text-align:center;color:var(--gold);margin-bottom:24px;">Saved Articles (${articles.length})</h3>`;
+            articles.forEach(article => {
+                const vClass = article.verdict?.toLowerCase() || 'suspicious';
+                html += `
+                    <div class="saved-article-card" data-uid="${article.uid}" onclick="showArticleDetail('${article.uid}')" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:16px;backdrop-filter:blur(10px);">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                            <span class="verdict-badge verdict-${vClass}" style="font-size:1.1rem;padding:10px 20px;">${article.verdict}</span>
+                            <button onclick="deleteArticle('${article.uid}');event.stopPropagation();" style="background:rgba(248,113,113,0.2);border:1px solid #f87171;color:#f87171;border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:1rem;opacity:0.9;" title="Delete">🗑</button>
+                        </div>
+                        <div style="font-size:0.95rem;line-height:1.5;margin-bottom:12px;color:rgba(255,255,255,0.9);">${article.snippet}</div>
+                        <div style="font-size:0.8rem;color:var(--gold);opacity:0.8;">${article.news_id} • ${new Date(article.created_at).toLocaleDateString()}</div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        async function deleteArticle(uid) {
+            try {
+                const res = await fetch(`http://127.0.0.1:8000/delete-article/${uid}/`, { method: 'DELETE' });
+                if (res.ok) loadSavedArticles();
+            } catch (e) {
+                alert('Delete error. Backend running?');
+            }
+        }
+
+        // Matrix Rain (unchanged)
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const matrixRain = {
+            yPositions: {},
+            run() {
+                ctx.fillStyle = 'rgba(0,0,0,0.1)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'rgba(177,156,217,0.85)';
+                ctx.font = '18px Space Mono';
+                for (let i = 0; i < canvas.width; i += 18) {
+                    const y = (this.yPositions[i] || 0) * 18;
+                    ctx.fillText('01'[Math.floor(Math.random() * 2)], i, y);
+                    this.yPositions[i] = this.yPositions[i] === undefined ? 0 : this.yPositions[i] + 1;
+                    if (y > canvas.height && Math.random() > 0.975) this.yPositions[i] = 0;
+                }
+                requestAnimationFrame(() => this.run());
+            }
+        };
+        matrixRain.run();
+
+        let chatHasMessages = false;
+        let currentAnalysis = null;
+        let currentNewsText = '';
+
+        function saveToStorage(analysis) {
+            let chats = JSON.parse(localStorage.getItem('factoraChats') || '[]');
+            chats.push({
+                ...analysis,
+                timestamp: new Date().toISOString(),
+                id: Date.now()
+            });
+            localStorage.setItem('factoraChats', JSON.stringify(chats.slice(-50))); // Keep last 50
+            console.log('Saved chat:', analysis);
+        }
+
+        function handleInput(el) {
+            const logo = document.getElementById('logo-container');
+            autoResize(el);
+            if (el.value.trim().length > 0) {
+                logo.classList.add('hidden');
+            } else if (!chatHasMessages) {
+                logo.classList.remove('hidden');
+            }
+        }
+
+        function autoResize(el) {
+            el.style.height = 'auto';
+            el.style.height = Math.min(el.scrollHeight, 140) + 'px';
+        }
+
+        function handleEnter(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                analyzeNews();
+            }
+        }
+
+        function scrollToBottom() {
+            const chatContainer = document.getElementById('chat-container');
+            if (!chatContainer) return;
+
+            // Immediate scroll
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            // Follow-up scrolls for animations/rendering
+            setTimeout(() => {
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }, 50);
+
+            setTimeout(() => {
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }, 250);
+        }
+
+        function hideLogo() {
+            document.getElementById('logo-container').classList.add('hidden');
+            chatHasMessages = true;
+        }
+
+        function newChat() {
+            document.getElementById('chat-container').innerHTML = '';
+            document.getElementById('main-search').value = '';
+            chatHasMessages = false;
+            document.getElementById('logo-container').classList.remove('hidden');
+            document.getElementById('main-search').focus();
+            autoResize(document.getElementById('main-search'));
+        }
+
+        function createMessage(content, isUser = false) {
+            const div = document.createElement('div');
+            const avatar = isUser ? '<div class="user-avatar">👤</div>' : '<div class="ai-avatar">🤖</div>';
+            div.innerHTML = `${avatar}<div class="message-content">${content}</div>`;
+            div.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
+
+            document.getElementById('chat-container').appendChild(div);
+            // Enhanced scroll
+            setTimeout(scrollToBottom, 10);
+            hideLogo();
+        }
+
+        function createAnalysisResponse(data) {
+            console.log('Data received:', data);
+            let html = '';
+            if (data.type === 'greeting' || data.type === 'question' || data.type === 'founder' || data.response) {
+                html = `<div style="font-size: 1.1rem; line-height: 1.6;">${escapeHtml(data.response || data.type)}</div>`;
+            } else {
+                // News analysis
+                const vClass = (data.verdict || 'suspicious').toLowerCase();
+                const m = Math.round((data.manipulation_score || 50) * 100);
+                const c = Math.round((data.credibility_score || 50) * 100);
+                html = `
+                    <div class="verdict-badge verdict-${vClass}">${escapeHtml(data.verdict || 'Analyzing...')}</div>
+                    ${data.category ? `<div class="category-tag">Category: ${escapeHtml(data.category)}</div>` : ''}
+                    ${data.sources ? `<div style="margin: 24px 0; opacity: 0.9; line-height: 1.7;"><strong>Sources:</strong> ${escapeHtml(data.sources)}</div>` : ''}
+                    ${data.reasons ? `<div style="margin-bottom: 32px; opacity: 0.9; line-height: 1.7;"><strong>Reasons:</strong><br>${escapeHtml(data.reasons)}</div>` : ''}
+                    <div class="stat-row">
+                        <div class="stat-label">Manipulation</div>
+                        <div class="stat-bar"><div class="stat-fill manipulation" style="width: ${m}%"></div></div>
+                        <div class="stat-value">${m}%</div>
+                    </div>
+                    <div class="stat-row">
+                        <div class="stat-label">Credibility</div>
+                        <div class="stat-bar"><div class="stat-fill credibility" style="width: ${c}%"></div></div>
+                        <div class="stat-value">${c}%</div>
+                    </div>
+                    <div style="margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--border); opacity: 0.8; font-style: italic; font-size: 0.95rem; text-align: center;">
+                        AI pattern analysis. Always verify sources.
+                    </div>
+                `;
+            }
+            createMessage(html, false);
+        }
+
+        async function analyzeNews() {
+            const input = document.getElementById('main-search');
+            const text = input.value.trim();
+            const btn = document.getElementById('send-btn');
+
+            console.log('🔥 analyzeNews() triggered:', { length: text.length, first20: text.substring(0, 20) });
+
+            if (!text) {
+                input.focus();
+                return;
+            }
+
+            // DISABLE INPUT during request to prevent double-submit/reload
+            input.disabled = true;
+            input.placeholder = 'Analyzing...';
+
+            // Add user message
+            createMessage(escapeHtml(text), true);
+            currentNewsText = text;
+            input.value = '';
+
+            // Loading state
+            btn.disabled = true;
+            btn.classList.add('loading');
+            btn.title = 'Analyzing news patterns...';
+
+            try {
+                console.log('📡 Fetching: http://127.0.0.1:8000/analyze/');
+                const res = await fetch('http://127.0.0.1:8000/analyze/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ text })
+                });
+
+                console.log('📥 Response:', { status: res.status, statusText: res.statusText, ok: res.ok });
+
+                // Log response headers for debugging
+                console.log('Headers:', [...res.headers.entries()]);
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    console.error('❌ Error response body:', errorText);
+                    throw new Error(`HTTP ${res.status}: ${res.statusText}. Body: ${errorText.substring(0, 200)}`);
+                }
+
+                const data = await res.json();
+                console.log('✅ JSON data:', data);
+                createAnalysisResponse(data);
+                currentAnalysis = data;
+
+            } catch (error) {
+                console.error('💥 Full error:', error);
+                const errorMsg = error.message.includes('Failed to fetch')
+                    ? 'Backend not running (python manage.py runserver)'
+                    : error.message;
+                createMessage(`<div style="color: #f87171; font-weight: 600;">❌ ${errorMsg}</div>`, false);
+            } finally {
+                // RE-ENABLE safely
+                input.disabled = false;
+                input.placeholder = 'Paste news article, say "hi", or ask about reality....';
+                btn.disabled = false;
+                btn.classList.remove('loading');
+                btn.title = 'Send';
+                setTimeout(() => input.focus(), 100);
+                scrollToBottom();
+            }
+        }
+
+        // saveChat() implemented for manual save
+
+        function saveChat() {
+            if (!currentAnalysis?.verdict || currentAnalysis.type === 'greeting' || currentAnalysis.type === 'question' || currentAnalysis.type === 'founder') {
+                showToast('Only save news analysis results! 👇 Use manual Save button after analyzing news.');
+                return;
+            }
+            const saveBtn = Array.from(document.querySelectorAll('.btn')).find(btn => btn.textContent.includes('Save'));
+            const originalText = saveBtn.textContent;
+            saveBtn.textContent = 'Saving...';
+            saveBtn.style.opacity = '0.7';
+
+            fetch('http://127.0.0.1:8000/save-article/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...currentAnalysis,
+                    content: currentNewsText  // Ensure content is sent
+                })
+            })
+                .then(res => {
+                    if (!res.ok) throw new Error(res.statusText);
+                    return res.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        showToast(`Saved as ${data.news_id}! ✅`);
+                        saveToStorage(currentAnalysis);
+                    } else {
+                        showToast('Save failed: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(e => showToast('Save error: Backend not running?'))
+                .finally(() => {
+                    saveBtn.textContent = originalText;
+                    saveBtn.style.opacity = '1';
+                });
+        }
+
+        function showToast(msg, duration = 2500) {
+            const toast = document.createElement('div');
+            Object.assign(toast.style, {
+                position: 'fixed',
+                top: '120px',
+                right: '20px',
+                background: 'linear-gradient(135deg, rgba(74,222,128,0.95), rgba(34,197,94,0.95))',
+                color: 'white',
+                padding: '16px 28px',
+                borderRadius: '28px',
+                fontWeight: '600',
+                fontSize: '0.95rem',
+                boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
+                zIndex: '10001',
+                backdropFilter: 'blur(20px)',
+                transform: 'translateX(100%)',
+                opacity: '0',
+                transition: 'all 0.4s cubic-bezier(0.4,0,0.2,1)'
+            });
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            requestAnimationFrame(() => {
+                toast.style.transform = 'translateX(0)';
+                toast.style.opacity = '1';
+            });
+            setTimeout(() => {
+                toast.style.transform = 'translateX(100%)';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 400);
+            }, duration);
+        }
+
+
+        // Modal functions
+        function closeModal() {
+            document.getElementById('article-modal').style.display = 'none';
+        }
+
+        async function showArticleDetail(uid) {
+            const modal = document.getElementById('article-modal');
+            const newsIdEl = document.getElementById('modal-news-id');
+            const analysisEl = document.getElementById('modal-analysis');
+            const contentEl = document.getElementById('modal-full-content');
+
+            modal.style.display = 'flex';
+            newsIdEl.textContent = 'Loading...';
+            analysisEl.innerHTML = '<p style="text-align:center;opacity:0.6;">Loading analysis...</p>';
+
+            try {
+                const res = await fetch(`http://127.0.0.1:8000/article/${uid}/`);
+                if (!res.ok) throw new Error('Article not found');
+                const data = await res.json();
+
+                newsIdEl.textContent = data.news_id;
+                analysisEl.innerHTML = createModalAnalysisHtml(data);
+                contentEl.textContent = data.content || 'No content available';
+            } catch (e) {
+                newsIdEl.textContent = 'Error';
+                analysisEl.innerHTML = `<p style="color:#f87171;text-align:center;">Failed to load: ${e.message}</p>`;
+            }
+        }
+
+        function createModalAnalysisHtml(data) {
+            const vClass = (data.verdict || 'suspicious').toLowerCase();
+            const m = Math.round((data.manipulation_score || 0.5) * 100);
+            const c = Math.round((data.credibility_score || 0.5) * 100);
+            return `
+                <div class="verdict-badge verdict-${vClass}" style="margin-bottom:24px;">${escapeHtml(data.verdict || 'N/A')}</div>
+                ${data.category ? `<div class="category-tag" style="margin:20px 0;">${escapeHtml(data.category)}</div>` : ''}
+                ${data.sources ? `<div style="margin:24px 0;opacity:0.9;line-height:1.7;"><strong>Sources:</strong> ${escapeHtml(data.sources)}</div>` : ''}
+                ${data.reason ? `<div style="margin-bottom:32px;opacity:0.9;line-height:1.7;"><strong>Analysis:</strong><br>${escapeHtml(data.reason)}</div>` : ''}
+                <div class="stat-row" style="margin:16px 0;">
+                    <div class="stat-label">Manipulation</div>
+                    <div class="stat-bar"><div class="stat-fill manipulation" style="width:${m}%"></div></div>
+                    <div class="stat-value">${m}%</div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label">Credibility</div>
+                    <div class="stat-bar"><div class="stat-fill credibility" style="width:${c}%"></div></div>
+                    <div class="stat-value">${c}%</div>
+                </div>
+            `;
+        }
+
+        // Close modal on outside click
+        document.addEventListener('click', (e) => {
+            const modal = document.getElementById('article-modal');
+            if (e.target === modal) closeModal();
+        });
+
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '<', '>': '>', '"': '"', "'": '&#039;' };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // REFRESH FIX: Removed form listener - now pure onclick + Enter handler
+
+        window.addEventListener('load', () => {
+            const activeSection = localStorage.getItem('activeSection') || 'chat';
+            showSection(activeSection);
+            document.getElementById('main-search').focus();
+        });
+    </script>
+</body>
+
+</html>

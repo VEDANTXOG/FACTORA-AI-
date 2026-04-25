@@ -1,0 +1,645 @@
+
+--- FACTORA AI ANALYSIS ---
+New U.S. Health Guidelines: The Trump administration released updated nutritional advice encouraging Americans to eat more whole foods and less packaged sugar, while also reducing the number of universally recommended childhood vaccines from 17 to 11.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Global Withdrawals: President Trump has ordered the U.S. to withdraw from 66 global organizations and treaties, including the India-headquartered International Solar Alliance and several key climate bodies.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Spanish Super Cup: Real Madrid defeated Atletico Madrid in Saudi Arabia to secure a spot in the final against Barcelona.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Spanish Super Cup: Real Madrid defeated Atletico Madrid in Saudi Arabia to secure a spot in the final against Barcelona.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Middle East & Europe: A ceasefire in Aleppo, Syria, has ended with reports of at least 22 deaths. In Ukraine, massive Russian strikes have left over a million people without heat or water.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+BREAKING: Scientists CONFIRM that drinking saltwater every morning can completely cure diabetes within 7 days. Top doctors say governments are hiding this miracle cure to protect pharmaceutical profits. Millions have already tried it with shocking results.
+{'verdict': 'Likely Fake', 'manipulation_score': 0.6, 'verification_score': 1.0, 'top_signal': 'emotion'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Awards: Nominations for the 2026 Actor Awards (SAG) have been released, with the films One Battle and Sinners leading the list.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Cinema: Priyanka Chopra is set to be a presenter at the 2026 Golden Globes. The release of actor Vijay's film Jana Nayagan remains in limbo following a CBFC appeal against its U/A certification.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Middle East & Europe: A ceasefire in Aleppo, Syria, has ended with reports of at least 22 deaths. In Ukraine, massive Russian strikes have left over a million people without heat or water.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Middle East & Europe: A ceasefire in Aleppo, Syria, has ended with reports of at least 22 deaths. In Ukraine, massive Russian strikes have left over a million people without heat or water.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Middle East & Europe: A ceasefire in Aleppo, Syria, has ended with reports of at least 22 deaths. In Ukraine, massive Russian strikes have left over a million people without heat or water
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+US Withdrawals: The Trump administration officially withdrew the U.S. from 66 international organizations, including climate change and UN-affiliated bodies, citing that they no longer serve American national interests.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Foreign Policy: A bill proposing a 500% tariff on countries, including India, that trade for Russian oil has been cleared. President Trump commented that a decision on Taiwan's status is "up to Xi" but warned against any change to the status quo.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Global Tensions: Internet blockages have been reported in Iran amid mounting anti-government protests over soaring prices. A Russian oil tanker has been seized by the US, an incident that has strained diplomatic relations.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+US Withdrawals: The Trump administration officially withdrew the U.S. from 66 international organizations, including climate change and UN-affiliated bodies, citing that they no longer serve American national interests.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Foreign Policy: A bill proposing a 500% tariff on countries, including India, that trade for Russian oil has been cleared. President Trump commented that a decision on Taiwan's status is "up to Xi" but warned against any change to the status quo.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Science: Scientists have developed a new drug that can regrow cartilage, which potentially could end the need for knee replacement surgery in the future.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Russia-Ukraine War: Russia launched fresh strikes using its rarely-used Oreshnik hypersonic ballistic missile against Ukraine. Meanwhile, Ukrainian President Zelenskyy states that a security guarantee text is ready to be finalized with the US.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Legal Rulings: The Karnataka High Court ruled that a neighbor cannot be prosecuted for "cruelty" in a matrimonial case, as they are not considered family.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Phillippines Landfill Collapse: A massive landfill collapse in Cebu City has killed one person, with dozens of sanitation workers still missing under the debris.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Indore Water Contamination: A water contamination crisis in Indore has resulted in several deaths and dozens of illnesses, leading to official investigations into the city's water supply lines.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Australian Open: Veteran tennis star Stan Wawrinka has been handed a wildcard for his final professional season; notably, Nick Kyrgios will miss the tournament.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Mamata Banerjee vs. ED: West Bengal CM Mamata Banerjee is leading a protest march in Kolkata against Enforcement Directorate (ED) raids on the offices of I-PAC and the founder’s residence.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Economic Forecast: The UN predicts India will grow at 7.2% for the 2025–26 fiscal year, suggesting that the impact of US tariffs will be largely offset.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+US Withdraws from 66 Global Bodies: The Trump administration has officially initiated withdrawal from 66 international organizations, including key climate and peace forums, citing a need to prioritize "American interests".
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Venezuela Turmoil: Following the US-led abduction of former President Nicolás Maduro, interim President Delcy Rodriguez has taken charge while the US asserts "indefinite" control over Venezuelan oil sales. In a gesture toward "peace," Venezuela has begun releasing political prisoners.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Greenland Dispute: Tensions are escalating between the US, Denmark, and Greenland. Greenlandic lawmakers have stated "Greenland is not for sale" following US threats of annexation, while European allies warn of a potential end to NATO if the annexation proceeds.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Iran Protests: Nationwide anti-government demonstrations have intensified across Iran, fueled by economic pressure. Authorities have implemented a country-wide internet and communications blackout to suppress the movement.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Legal Rulings: The Karnataka High Court ruled that a neighbor cannot be prosecuted for "cruelty" in a matrimonial case, as they are not considered family.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Phillippines Landfill Collapse: A massive landfill collapse in Cebu City has killed one person, with dozens of sanitation workers still missing under the debris.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Science: Researchers at a leading university have announced progress on a biodegradable battery that can safely dissolve in water after use. The innovation could reduce electronic waste and benefit medical implants and environmental sensors.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Technology: A startup claims it has developed an AI system capable of predicting earthquakes up to 48 hours in advance using satellite vibration data. Independent experts say the idea is promising but requires large-scale validation.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 0.7, 'top_signal': 'authority'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Health: Doctors are shocked after a newly discovered “miracle herb” reportedly cures diabetes in just seven days. Social media users claim pharmaceutical companies are trying to suppress the information.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Politics: Secret documents allegedly reveal that world leaders have agreed to shut down the internet for 24 hours next month to “reset global systems.” Officials have not commented, but insiders say preparations are already underway.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Politics: Secret documents allegedly reveal that world leaders have agreed to shut down the internet for 24 hours next month to “reset global systems.” Officials have not commented, but insiders say preparations are already underway.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Phillippines Landfill Collapse: A massive landfill collapse in Cebu City has killed one person, with dozens of sanitation workers still missing under the debris.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Indore Water Contamination: A water contamination crisis in Indore has resulted in several deaths and dozens of illnesses, leading to official investigations into the city's water supply lines.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Phillippines Landfill Collapse: A massive landfill collapse in Cebu City has killed one person, with dozens of sanitation workers still missing under the debris.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Greenland & NATO: U.S. President Donald Trump has stated that the U.S. "must own" Greenland to block Russian and Chinese ambitions, threatening to take it "the hard way" if necessary. Experts warn this could signal a major crisis for NATO and even its potential end.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Iran Unrest: Nationwide internet blackouts have been reported as anti-government protests explode across Iran. The U.S. has warned Tehran against using lethal force, while Iran's ambassador to the UN blamed the U.S. for stoking "violent" demonstrations.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Venezuela Crisis: Following the reported capture of President Nicolás Maduro, the U.S. is seeking a $100 billion deal for Venezuelan oil. Meanwhile, interim leadership has been named as the country seeks to re-establish formal ties with Washington.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Global Economy: The U.S. has greenlit a bill proposing 500% tariffs on Russian oil purchases, a move that could severely impact global trade partners, including India.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Market Trends: The Indian Sensex rose over 650 points today, with the Nifty50 crossing the 23,800 mark.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Market Trends: The Indian Sensex rose over 650 points today, with the Nifty50 crossing the 23,800 mark.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Greenland & NATO: U.S. President Donald Trump has stated that the U.S. "must own" Greenland to block Russian and Chinese ambitions, threatening to take it "the hard way" if necessary. Experts warn this could signal a major crisis for NATO and even its potential end.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+According to Reuters and the Associated Press, Iran experienced widespread internet disruptions on Tuesday as anti-government protests intensified in multiple cities. BBC News reported that Iranian authorities denied allegations of excessive force, while the United Nations called for restraint amid growing international concern.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+FIFA.com and Olympics.com reported that preparations are underway for the upcoming international tournament, with organizers highlighting sustainability and athlete safety as key priorities.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+The World Health Organization (who.int) and the U.S. Centers for Disease Control and Prevention (cdc.gov) reported an increase in seasonal influenza cases across several regions, urging vulnerable populations to seek vaccination.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+FIFA.com and Olympics.com reported that preparations are underway for the upcoming international tournament, with organizers highlighting sustainability and athlete safety as key priorities.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Syria Conflict: The last Kurdish-led Syrian Democratic Forces (SDF) have left Aleppo following a ceasefire deal after days of violent clashes.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Mass protests in Iran escalate — Government crackdown on demonstrators has reportedly killed hundreds amid an internet blackout; the U.S. is reportedly weighing military options in response to the violence.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+British boxer Dalton Smith wins world title — Smith scored a knockout victory to become the latest WBC super-lightweight world champion.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Savings & taxation updates, entertainment trends, and cricket highlights are trending on national news portals.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Venezuela Leadership: Donald Trump has declared himself the "Acting President of Venezuela" in a social media post, following the recent ousting of Nicolas Maduro.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Fed Investigation: The U.S. Justice Department has opened a criminal probe into Federal Reserve Chair Jerome Powell after his refusal to lower interest rates.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Venezuela Leadership: Donald Trump has declared himself the "Acting President of Venezuela" in a social media post, following the recent ousting of Nicolas Maduro.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Iran Unrest: Human rights groups report over 500 deaths as mass anti-government protests enter their third week. President Donald Trump has stated he is considering "very strong" military options while a nationwide internet blackout remains in effect.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Spanish Super Cup: Barcelona retained the title by defeating Real Madrid 3-2 in a dramatic El Clasico final, with Raphinha scoring twice.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+BRICS 2026: India launched the logo for the BRICS India 2026 summit, featuring the lotus.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Football: Real Madrid sacked coach Xabi Alonso after just seven months, replacing him with Álvaro Arbeloa.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Real Madrid sacked coach Xabi Alonso after just seven months, replacing him with Álvaro Arbeloa.
+{'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Diplomatic Shifts: Taiwan and the U.S. have reached a "general consensus" on a trade deal, while the Trump administration has already revoked over 100,000 visas since returning to office.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Greenland Acquisition Push: The Trump administration is reportedly considering options to acquire Greenland to prevent Russian or Chinese influence, a move firmly rejected by Danish and Greenlandic leaders.
+{'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Spain Train Disaster: A high-speed train collision in southern Spain has left at least 40 people dea...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.2, 'verification_score': 0.0, 'top_signal': 'emotion'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Politics', 'summary': 'Spain Train Disaster: A high-speed train collision in southern Spain has left at least 40 people dead and dozens missing. Prime Minister Pedro Sanchez has declared three days of mourning and vowed a full investigation.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+E-Commerce Regulations: The Indian government has ordered quick-commerce platforms to halt "10-minut...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Politics', 'summary': 'E-Commerce Regulations: The Indian government has ordered quick-commerce platforms to halt "10-minute" delivery services due to safety concerns for delivery riders.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+U.S. College Football: Indiana defeated Miami 27-21 to win its first National Championship...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'College Football: Indiana defeated Miami 27-21 to win its first National Championship U.S.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+UP Government Action: The CEO of Noida was removed and a Special Investigation Team (SIT) was formed...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'UP Government Action: The CEO of Noida was removed and a Special Investigation Team (SIT) was formed following the drowning death of a techie whose car plunged into a pit.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Gaza "Board of Peace": President Trump has invited Vladimir Putin to join a proposed "Board of Peace...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Politics', 'summary': 'Gaza "Board of Peace": President Trump has invited Vladimir Putin to join a proposed "Board of Peace" for Gaza.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+New BJP President: Nitin Nabin was elected unopposed as the national president of the Bharatiya Jana...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'New BJP President: Nitin Nabin was elected unopposed as the national president of the Bharatiya Janata Party (BJP) and is set to take charge today, January 20.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Football: Senegal defeated Morocco to win the AFCON 2025 title following a controversial walk-off by...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Football: Senegal defeated Morocco to win the AFCON 2025 title following a controversial walk-off by the hosts.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Noida: A techie's drowning death has led to the removal of the Noida Authority CEO and the arrest of...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Politics', 'summary': "Noida: A techie's drowning death has led to the removal of the Noida Authority CEO and the arrest of a real estate developer."}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Ajit Pawar Plane Crash: Maharashtra Deputy CM Ajit Pawar and four others tragically died in a Learje...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['ai.googleblog.com']}, 'category': 'General / Unclear', 'summary': 'Ajit Pawar Plane Crash: Maharashtra Deputy CM Ajit Pawar and four others tragically died in a Learjet 45 plane crash in Baramati. The aircraft was reportedly airworthy during its last audit in February 2025.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Ajit Pawar Plane Crash: Maharashtra Deputy CM Ajit Pawar and four others tragically died in a Learje...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['ai.googleblog.com']}, 'category': 'General / Unclear', 'summary': 'Ajit Pawar Plane Crash: Maharashtra Deputy CM Ajit Pawar and four others tragically died in a Learjet 45 plane crash in Baramati. The aircraft was reportedly airworthy during its last audit in February 2025.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Ajit Pawar Plane Crash: Maharashtra Deputy CM Ajit Pawar and four others tragically died in a Learje...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['ai.googleblog.com']}, 'category': 'General / Unclear', 'summary': 'Ajit Pawar Plane Crash: Maharashtra Deputy CM Ajit Pawar and four others tragically died in a Learjet 45 plane crash in Baramati. The aircraft was reportedly airworthy during its last audit in February 2025.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+LEAKED: NASA Satellite Footage Proves Giant Lifeforms Moving Under Arctic Ice....
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'General / Unclear', 'summary': 'LEAKED: NASA Satellite Footage Proves Giant Lifeforms Moving Under Arctic Ice.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+India-EU Trade Deal: India and the European Union have finalized a historic Free Trade Agreement (FT...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Business', 'summary': 'The Trump administration noted that "India comes out on top" in this deal, which is expected to slash tariffs on European cars to 40% and boost Indian pharma and textiles. India-EU Trade Deal: India and the European Union have finalized a historic Free Trade Agreement (FTA).'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Republic Day Aftermath: Following the 77th Republic Day parade, the DRDO's hypersonic glide missile ...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Defense', 'summary': 'Republic Day Aftermath: Following the 77th Republic Day parade, the DRDO\'s hypersonic glide missile and "Silent Warrior" camel and dog squads remain a top trending topic.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Budget 2026: Pre-budget sessions have begun in Parliament with President Murmu's address. Markets ar...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': "Markets are focused on Finance Minister Nirmala Sitharaman's upcoming ninth consecutive budget Budget 2026: Pre-budget sessions have begun in Parliament with President Murmu's address."}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+EU Labels IRGC: The European Union has officially added Iran’s Revolutionary Guard (IRGC) to its ter...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'General / Unclear', 'summary': 'EU Labels IRGC: The European Union has officially added Iran’s Revolutionary Guard (IRGC) to its terrorist list, a move Iran has condemned as "illogical".'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+"bbc.com", "cnn.com", "aljazeera.com", "dw.com", "france24.com",...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['bbc.com', 'cnn.com', 'aljazeera.com']}, 'category': 'General / Unclear', 'summary': '"bbc.com", "cnn.com", "aljazeera.com", "dw.com", "france24.com",'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Politics: In Maharashtra, the mortal remains of Ajit Pawar were cremated in Baramati following his d...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['ai.googleblog.com']}, 'category': 'General / Unclear', 'summary': 'Politics: In Maharashtra, the mortal remains of Ajit Pawar were cremated in Baramati following his death in a plane crash.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+US-Iran Tensions: President Donald Trump has signaled plans to talk with Iran even as the Pentagon p...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['reuters.com']}, 'category': 'Politics', 'summary': 'US-Iran Tensions: President Donald Trump has signaled plans to talk with Iran even as the Pentagon prepares for potential military action. Reuters Meanwhile, Iran’s top diplomat is visiting Turkiye amidst warnings of "instant" retaliation if attacked.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Epstein Files Release: The US Department of Justice has released over 3.5 million pages of documents...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Epstein Files Release: The US Department of Justice has released over 3.5 million pages of documents related to the Jeffrey Epstein investigation.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+UN Financial Crisis: UN Secretary-General António Guterres warned of an "imminent financial collapse...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'World', 'summary': 'UN Financial Crisis: UN Secretary-General António Guterres warned of an "imminent financial collapse" for the United Nations, noting it could run out of funds by July due to unpaid member fees.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Catherine O’Hara Passes Away: The beloved Emmy-winning actress, known for Schitt’s Creek and Home Al...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Catherine O’Hara Passes Away: The beloved Emmy-winning actress, known for Schitt’s Creek and Home Alone, has died at the age of 71.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Alex Pretti Probe: The US DOJ has opened a civil rights investigation into the shooting of Alex Pret...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Alex Pretti Probe: The US DOJ has opened a civil rights investigation into the shooting of Alex Pretti in Minneapolis, sparking nationwide protests and the arrest of journalist Don Lemon.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+SpaceX Profit: Sources report SpaceX generated approximately $8 billion in profit last year as it mo...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Business', 'summary': 'SpaceX Profit: Sources report SpaceX generated approximately $8 billion in profit last year as it moves toward a potential IPO valued at over $1.5 trillion.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Luka Dončić led the Los Angeles Lakers to a blowout win over the Washington Wizards with a historic ...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Luka Dončić led the Los Angeles Lakers to a blowout win over the Washington Wizards with a historic first-half triple-double.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['rfi.fr']}, 'category': 'World', 'summary': 'Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand Masters quarterfinals.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['rfi.fr']}, 'category': 'World', 'summary': 'Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand Masters quarterfinals.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['rfi.fr']}, 'category': 'World', 'summary': 'Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand Masters quarterfinals.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['rfi.fr']}, 'category': 'World', 'summary': 'Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand Masters quarterfinals.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['rfi.fr']}, 'category': 'World', 'summary': 'Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand Masters quarterfinals.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['rfi.fr']}, 'category': 'World', 'summary': 'Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand Masters quarterfinals.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['rfi.fr']}, 'category': 'World', 'summary': 'Badminton: Indian youngster Devika Sihag stunned top seed Supanida Katethong to reach the Thailand Masters quarterfinals.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Hockey: Former India head coach Michael Nobbs passed away at the age of 72 after a long illness....
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Sports', 'summary': 'Hockey: Former India head coach Michael Nobbs passed away at the age of 72 after a long illness.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+UN Financial Crisis: Secretary-General António Guterres warned that the United Nations faces "immine...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'World', 'summary': 'UN Financial Crisis: Secretary-General António Guterres warned that the United Nations faces "imminent financial collapse" by July due to unpaid member dues.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Global Crisis: A mine collapse in the eastern DR Congo has reportedly killed more than 200 people....
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'World', 'summary': 'Global Crisis: A mine collapse in the eastern DR Congo has reportedly killed more than 200 people.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Cricket: The 2026 Men's T20 World Cup is set to begin on February 7, co-hosted by India and Sri Lank...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Sports', 'summary': "Cricket: The 2026 Men's T20 World Cup is set to begin on February 7, co-hosted by India and Sri Lanka."}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Economic Survey: The 2026 Economic Survey was released, projecting positive growth for India while c...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Economy', 'summary': 'Economic Survey: The 2026 Economic Survey was released, projecting positive growth for India while cautioning against fiscal populism and the "lack of investment appetite" in the private sector'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Legal Rulings: The Supreme Court of India has declared the right to menstrual health a fundamental r...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'World', 'summary': 'Legal Rulings: The Supreme Court of India has declared the right to menstrual health a fundamental right, ordering free sanitary pads for school girls.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Government Shutdown Begins: A partial federal government shutdown began at midnight after Congress f...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Government Shutdown Begins: A partial federal government shutdown began at midnight after Congress failed to pass a funding package by the January 30 deadline. While the Senate passed a bipartisan deal late Friday, the House did not vote before recessing for the weekend.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Director Swap: In a major industry shift, David Fincher is set to direct the film using a script pen...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Director Swap: In a major industry shift, David Fincher is set to direct the film using a script penned by Quentin Tarantino.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Casting Updates: Elizabeth Debicki and Scott Caan have officially joined the cast alongside Brad Pit...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Casting Updates: Elizabeth Debicki and Scott Caan have officially joined the cast alongside Brad Pitt.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Director Swap: In a major industry shift, David Fincher is set to direct the film using a script pen...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Director Swap: In a major industry shift, David Fincher is set to direct the film using a script penned by Quentin Tarantino.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Political Shifts in Maharashtra: Sunetra Pawar is set to take the oath today as Maharashtra's first ...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': "Political Shifts in Maharashtra: Sunetra Pawar is set to take the oath today as Maharashtra's first woman Deputy Chief Minister following the death of Ajit Pawar in a recent plane crash."}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Union Budget 2026: Ahead of the Budget presentation on February 1, the Economic Survey projected a b...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'World', 'summary': 'Union Budget 2026: Ahead of the Budget presentation on February 1, the Economic Survey projected a bright outlook for India’s GDP growth despite global volatility.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Crime in Hyderabad: A 26-year-old cloth merchant was shot and robbed of ₹6 lakh outside an SBI branc...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Crime in Hyderabad: A 26-year-old cloth merchant was shot and robbed of ₹6 lakh outside an SBI branch in Koti this morning'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Political Shifts in Maharashtra: Sunetra Pawar is set to take the oath today as Maharashtra's first ...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': "Political Shifts in Maharashtra: Sunetra Pawar is set to take the oath today as Maharashtra's first woman Deputy Chief Minister following the death of Ajit Pawar in a recent plane crash"}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+S Government Shutdown: The United States has entered a partial government shutdown after Congress fa...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'S Government Shutdown: The United States has entered a partial government shutdown after Congress failed to meet the budget funding deadline.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief M...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra Political Shift: Sunetra Pawar is set to become Maharashtra’s first woman Deputy Chief Minister following the sudden death of her husband, Ajit Pawar, in a recent plane crash. Sharad Pawar has stated the appointment was a party decision and he was not consulted.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+ndia’s Economy: The Economic Survey 2025-26 suggests India's growth is strong but warns of a "lack o...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Business', 'summary': 'ndia’s Economy: The Economic Survey 2025-26 suggests India\'s growth is strong but warns of a "lack of investment appetite" from private corporations'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Epstein File Release: The Department of Justice has released over 3 million pages of previously conf...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'General / Unclear', 'summary': 'Epstein File Release: The Department of Justice has released over 3 million pages of previously confidential files related to Jeffrey Epstein.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+India’s Economy: The Economic Survey 2025-26 suggests India's growth is strong but warns of a "lack ...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Business', 'summary': 'India’s Economy: The Economic Survey 2025-26 suggests India\'s growth is strong but warns of a "lack of investment appetite" from private corporations'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+S Government Shutdown: The United States has entered a partial government shutdown after Congress fa...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'S Government Shutdown: The United States has entered a partial government shutdown after Congress failed to meet the budget funding deadline.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Epstein File Release: The U.S. Justice Department has released over 3 million pages of previously co...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['ai.googleblog.com']}, 'category': 'General / Unclear', 'summary': 'Justice Department has released over 3 million pages of previously confidential files related to Jeffrey Epstein, detailing notable names and interactions, including mentions of Elon Musk Epstein File Release: The U.S.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra’s First Woman Deputy CM: Sunetra Pawar is set to be sworn in as Maharashtra’s first woma...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra’s First Woman Deputy CM: Sunetra Pawar is set to be sworn in as Maharashtra’s first woman Deputy Chief Minister today at 5 PM at Lok Bhavan in Mumbai. She was unanimously elected by the NCP legislature party to succeed her late husband, Ajit Pawar, following his recent death in a plane crash.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra’s First Woman Deputy CM: Sunetra Pawar is set to be sworn in as Maharashtra’s first woma...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra’s First Woman Deputy CM: Sunetra Pawar is set to be sworn in as Maharashtra’s first woman Deputy Chief Minister today at 5 PM at Lok Bhavan in Mumbai. She was unanimously elected by the NCP legislature party to succeed her late husband, Ajit Pawar, following his recent death in a plane crash.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra’s First Woman Deputy CM: Sunetra Pawar is set to be sworn in as Maharashtra’s first woma...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': 'Maharashtra’s First Woman Deputy CM: Sunetra Pawar is set to be sworn in as Maharashtra’s first woman Deputy Chief Minister today at 5 PM at Lok Bhavan in Mumbai. She was unanimously elected by the NCP legislature party to succeed her late husband, Ajit Pawar, following his recent death in a plane crash.'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Indian Economy: On the eve of the Union Budget, the Economic Survey 2025-26 warned of a "lack of inv...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Economy', 'summary': 'Indian Economy: On the eve of the Union Budget, the Economic Survey 2025-26 warned of a "lack of investment appetite" from private corporations despite promising potential GDP growth'}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+Maharashtra’s First Woman Deputy CM: Sunetra Pawar was unanimously elected leader of the NCP legisla...
+{'manipulation': {'verdict': 'Likely Real', 'manipulation_score': 0.0, 'verification_score': 1.0, 'top_signal': 'none'}, 'verification': {'status': 'Coverage found', 'sources': ['un.org']}, 'category': 'Politics', 'summary': "Maharashtra’s First Woman Deputy CM: Sunetra Pawar was unanimously elected leader of the NCP legislature party today. She is scheduled to be sworn in as Maharashtra's first woman Deputy Chief Minister at 5:00 PM at Raj Bhavan."}
+----------------------------------------
+
+--- FACTORA AI ANALYSIS ---
+India-U.S. Trade Deal: Prime Minister Modi and President Trump have reached a significant trade deal...
+{'manipulation': {'verdict': 'Unverified', 'manipulation_score': 0.0, 'verification_score': 0.0, 'top_signal': 'none'}, 'verification': {'status': 'No confirmed coverage', 'sources': []}, 'category': 'Politics', 'summary': 'will lower tariffs on Indian goods from 50% to 18%, while India has committed to stop purchasing Russian oil and invest $500 billion into the U.S.. Trade Deal: Prime Minister Modi and President Trump have reached a significant trade deal.'}
+----------------------------------------
