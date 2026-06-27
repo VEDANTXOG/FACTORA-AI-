@@ -1,0 +1,1 @@
+Start Django backend: cd factora_backend; activate venv; migrate; runserver - fix 'Backend not running' error, expect yellow warning

@@ -163,7 +163,14 @@
 
         .header-actions {
             display: flex;
+            align-items: center;
             gap: 12px;
+            width: 100%;
+
+        }
+
+        .header-actions>*:last-child {
+            margin-left: auto;
         }
 
         .btn {
@@ -185,6 +192,43 @@
             color: #000;
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(177, 156, 217, 0.4);
+        }
+
+
+        /* User Badge */
+        .user-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px 8px 10px;
+            border: 1.5px solid var(--gold);
+            border-radius: 28px;
+            background: rgba(177, 156, 217, 0.08);
+            backdrop-filter: blur(10px);
+            pointer-events: none;
+        }
+
+        .user-badge-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 12px;
+            font-family: 'Cinzel', serif;
+            flex-shrink: 0;
+        }
+
+        .user-badge-name {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
         }
 
         /* Main Chat Area */
@@ -785,6 +829,10 @@
         <div class="header-actions">
             <button class="btn" onclick="newChat()">New Chat</button>
             <button class="btn" onclick="saveChat()">Save</button>
+            <div class="user-badge" id="user-badge">
+                <div class="user-badge-avatar" id="user-avatar">G</div>
+                <span class="user-badge-name" id="user-badge-name">Guest</span>
+            </div>
         </div>
     </header>
 
@@ -947,6 +995,41 @@
     </div>
 
     <script>
+        // Auth Utils
+        function saveAuth(data) {
+            localStorage.setItem('factora_token', data.token);
+            localStorage.setItem('factora_user', JSON.stringify(data.user));
+            localStorage.setItem('factora_guest', 'false');
+        }
+
+        function getToken() {
+            return localStorage.getItem('factora_token');
+        }
+
+        function getUser() {
+            const stored = localStorage.getItem('factora_user');
+            return stored ? JSON.parse(stored) : null;
+        }
+
+        function logout() {
+            localStorage.removeItem('factora_token');
+            localStorage.removeItem('factora_user');
+            localStorage.setItem('factora_guest', 'true');
+            localStorage.removeItem('auth_method');
+            window.location.reload();
+        }
+
+        function isAuthenticated() {
+            return !!getToken();
+        }
+
+        function getAuthHeaders() {
+            const token = getToken();
+            const headers = { 'Content-Type': 'application/json', 'Accept': 'application/json' };
+            if (token) headers.Authorization = `Bearer ${token}`;
+            return headers;
+        }
+
         // Init
         // Sidebar hover handled by CSS
 
@@ -989,7 +1072,9 @@
             const container = document.getElementById('saved-container');
             container.innerHTML = '<p style="text-align:center;opacity:0.6;">Loading...</p>';
             try {
-                const res = await fetch('http://127.0.0.1:8000/saved-articles/');
+                const res = await fetch('http://127.0.0.1:8000/saved-articles/', {
+                    headers: getAuthHeaders()
+                });
                 if (!res.ok) throw new Error();
                 const data = await res.json();
                 renderSavedArticles(data.articles || []);
@@ -1023,7 +1108,10 @@
 
         async function deleteArticle(uid) {
             try {
-                const res = await fetch(`http://127.0.0.1:8000/delete-article/${uid}/`, { method: 'DELETE' });
+                const res = await fetch(`http://127.0.0.1:8000/delete-article/${uid}/`, {
+                    method: 'DELETE',
+                    headers: getAuthHeaders()
+                });
                 if (res.ok) loadSavedArticles();
             } catch (e) {
                 alert('Delete error. Backend running?');
@@ -1091,7 +1179,10 @@
         function handleEnter(e) {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
                 analyzeNews();
+                return false;
             }
         }
 
@@ -1138,39 +1229,85 @@
             hideLogo();
         }
 
+
+        function parseScore(val) {
+            if (!val && val !== 0) return 50;
+            if (typeof val === 'string' && val.endsWith('%')) return parseInt(val);
+            if (typeof val === 'number') return val <= 1 ? Math.round(val * 100) : Math.round(val);
+            return 50;
+        }
+
+        function parseSources(sources) {
+            if (!sources) return null;
+            if (typeof sources === 'string') return sources;
+            if (Array.isArray(sources)) return sources.length > 0 ? sources.join(', ') : null;
+            if (typeof sources === 'object') {
+                if (sources.found && sources.found.length > 0) return sources.found.join(', ');
+                if (sources.status) return sources.status;
+            }
+            return null;
+        }
+
+        function parseReasons(data) {
+            if (data.explanation && data.explanation.reasoning && data.explanation.reasoning.length > 0)
+                return '• ' + data.explanation.reasoning.map(escapeHtml).join('<br>• ');
+            if (data.reasons) return escapeHtml(data.reasons);
+            if (data.fake_reasons && data.fake_reasons.length > 0)
+                return '• ' + data.fake_reasons.map(escapeHtml).join('<br>• ');
+            return null;
+        }
+
+
+
         function createAnalysisResponse(data) {
             console.log('Data received:', data);
             let html = '';
-            if (data.type === 'greeting' || data.type === 'question' || data.type === 'founder' || data.response) {
-                html = `<div style="font-size: 1.1rem; line-height: 1.6;">${escapeHtml(data.response || data.type)}</div>`;
+
+            if (data.type !== 'news' || data.response) {
+                html = `<div style="font-size:1.1rem;line-height:1.6;">${escapeHtml(data.response || data.message || '')}</div>`;
             } else {
-                // News analysis
-                const vClass = (data.verdict || 'suspicious').toLowerCase();
-                const m = Math.round((data.manipulation_score || 50) * 100);
-                const c = Math.round((data.credibility_score || 50) * 100);
+                const verdict = data.verdict || 'Suspicious';
+                const vClass = verdict.toLowerCase();
+
+                const m = data.scores ? parseScore(data.scores.manipulation_score) : parseScore(data.manipulation_score);
+                const c = data.scores ? parseScore(data.scores.credibility_score) : parseScore(data.credibility_score);
+                const conf = data.scores ? parseScore(data.scores.confidence) : null;
+                const confLabel = data.explanation ? data.explanation.confidence_label : null;
+                const sourcesText = parseSources(data.sources);
+                const reasonsHtml = parseReasons(data);
+                const summary = data.summary || null;
+                const positives = (data.positive_signals && data.positive_signals.length > 0)
+                    ? data.positive_signals : null;
+
                 html = `
-                    <div class="verdict-badge verdict-${vClass}">${escapeHtml(data.verdict || 'Analyzing...')}</div>
-                    ${data.category ? `<div class="category-tag">Category: ${escapeHtml(data.category)}</div>` : ''}
-                    ${data.sources ? `<div style="margin: 24px 0; opacity: 0.9; line-height: 1.7;"><strong>Sources:</strong> ${escapeHtml(data.sources)}</div>` : ''}
-                    ${data.reasons ? `<div style="margin-bottom: 32px; opacity: 0.9; line-height: 1.7;"><strong>Reasons:</strong><br>${escapeHtml(data.reasons)}</div>` : ''}
-                    <div class="stat-row">
-                        <div class="stat-label">Manipulation</div>
-                        <div class="stat-bar"><div class="stat-fill manipulation" style="width: ${m}%"></div></div>
-                        <div class="stat-value">${m}%</div>
-                    </div>
-                    <div class="stat-row">
-                        <div class="stat-label">Credibility</div>
-                        <div class="stat-bar"><div class="stat-fill credibility" style="width: ${c}%"></div></div>
-                        <div class="stat-value">${c}%</div>
-                    </div>
-                    <div style="margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--border); opacity: 0.8; font-style: italic; font-size: 0.95rem; text-align: center;">
-                        AI pattern analysis. Always verify sources.
-                    </div>
-                `;
+            <div class="verdict-badge verdict-${vClass}">${escapeHtml(verdict)}</div>
+            ${data.category ? `<div class="category-tag">📂 ${escapeHtml(data.category)}</div>` : ''}
+            ${confLabel ? `<div style="margin:8px 0 16px;font-size:0.85rem;color:rgba(255,255,255,0.6);">Confidence: <strong style="color:var(--gold);">${escapeHtml(confLabel)}</strong></div>` : ''}
+            ${summary ? `<div style="margin:16px 0;padding:16px 20px;background:rgba(255,255,255,0.05);border-radius:16px;border-left:3px solid var(--gold);font-size:0.95rem;line-height:1.6;"><strong style="color:var(--gold);">Summary:</strong> ${escapeHtml(summary)}</div>` : ''}
+            ${sourcesText ? `<div style="margin:16px 0;opacity:0.9;line-height:1.7;"><strong>Sources:</strong> ${escapeHtml(sourcesText)}</div>` : ''}
+            ${reasonsHtml ? `<div style="margin-bottom:24px;opacity:0.9;line-height:1.9;font-size:0.95rem;"><strong>Analysis:</strong><br><span style="display:block;margin-top:8px;">${reasonsHtml}</span></div>` : ''}
+            ${positives ? `<div style="margin-bottom:20px;padding:14px 18px;background:rgba(74,222,128,0.07);border:1px solid rgba(74,222,128,0.25);border-radius:14px;font-size:0.9rem;line-height:1.8;opacity:0.9;"><strong style="color:#4ade80;">✓ Credibility signals:</strong><br>• ${positives.map(escapeHtml).join('<br>• ')}</div>` : ''}
+            <div class="stat-row">
+                <div class="stat-label">Manipulation</div>
+                <div class="stat-bar"><div class="stat-fill manipulation" style="width:${m}%"></div></div>
+                <div class="stat-value">${m}%</div>
+            </div>
+            <div class="stat-row">
+                <div class="stat-label">Credibility</div>
+                <div class="stat-bar"><div class="stat-fill credibility" style="width:${c}%"></div></div>
+                <div class="stat-value">${c}%</div>
+            </div>
+            ${conf !== null ? `<div class="stat-row">
+                <div class="stat-label">Confidence</div>
+                <div class="stat-bar"><div class="stat-fill" style="width:${conf}%;background:linear-gradient(90deg,#818cf8,#6366f1);"></div></div>
+                <div class="stat-value">${conf}%</div>
+            </div>` : ''}
+            <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);opacity:0.65;font-style:italic;font-size:0.88rem;text-align:center;">
+                AI pattern analysis only. Always verify with trusted sources.
+            </div>`;
             }
             createMessage(html, false);
         }
-
         async function analyzeNews() {
             const input = document.getElementById('main-search');
             const text = input.value.trim();
@@ -1198,25 +1335,27 @@
             btn.title = 'Analyzing news patterns...';
 
             try {
-                console.log('📡 Fetching: http://127.0.0.1:8000/analyze/');
+                console.log('📡 Fetching /analyze/');
                 const res = await fetch('http://127.0.0.1:8000/analyze/', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({ text })
+                    headers: getAuthHeaders(),
+                    body: JSON.stringify({ text }),
+                    redirect: 'manual'
                 });
 
-                console.log('📥 Response:', { status: res.status, statusText: res.statusText, ok: res.ok });
-
-                // Log response headers for debugging
-                console.log('Headers:', [...res.headers.entries()]);
+                if (res.type === 'opaqueredirect' || (res.status >= 300 && res.status < 400)) {
+                    throw new Error('Server redirected the request. Check Django urls.py.');
+                }
 
                 if (!res.ok) {
                     const errorText = await res.text();
-                    console.error('❌ Error response body:', errorText);
-                    throw new Error(`HTTP ${res.status}: ${res.statusText}. Body: ${errorText.substring(0, 200)}`);
+                    throw new Error(`HTTP ${res.status}: ${errorText.substring(0, 200)}`);
+                }
+
+                const contentType = res.headers.get('content-type') || '';
+                if (!contentType.includes('application/json')) {
+                    const body = await res.text();
+                    throw new Error(`Expected JSON but got HTML. Backend may have crashed.\n${body.substring(0, 150)}`);
                 }
 
                 const data = await res.json();
@@ -1225,6 +1364,7 @@
                 currentAnalysis = data;
 
             } catch (error) {
+
                 console.error('💥 Full error:', error);
                 const errorMsg = error.message.includes('Failed to fetch')
                     ? 'Backend not running (python manage.py runserver)'
@@ -1254,9 +1394,13 @@
             saveBtn.textContent = 'Saving...';
             saveBtn.style.opacity = '0.7';
 
+            if (!isAuthenticated()) {
+                showToast('Login required to save articles');
+                return;
+            }
             fetch('http://127.0.0.1:8000/save-article/', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: getAuthHeaders(),
                 body: JSON.stringify({
                     ...currentAnalysis,
                     content: currentNewsText  // Ensure content is sent
@@ -1330,7 +1474,9 @@
             analysisEl.innerHTML = '<p style="text-align:center;opacity:0.6;">Loading analysis...</p>';
 
             try {
-                const res = await fetch(`http://127.0.0.1:8000/article/${uid}/`);
+                const res = await fetch(`http://127.0.0.1:8000/article/${uid}/`, {
+                    headers: getAuthHeaders()
+                });
                 if (!res.ok) throw new Error('Article not found');
                 const data = await res.json();
 
@@ -1382,6 +1528,59 @@
             const activeSection = localStorage.getItem('activeSection') || 'chat';
             showSection(activeSection);
             document.getElementById('main-search').focus();
+
+            // User Badge — reads from localStorage set by auth pages
+            // Enhanced user badge with logout
+            const userBadge = document.getElementById('user-badge');
+            if (userBadge) {
+                userBadge.style.cursor = 'pointer';
+                userBadge.title = 'Click to logout';
+                userBadge.onclick = logout;
+            }
+
+            // User Badge (priority: new auth keys; fallback: legacy keys)
+            let displayName = 'Guest'
+            let initial = 'G'
+
+            const isLoggedIn = localStorage.getItem('isLoggedIn')
+            const newUsername = localStorage.getItem('username')
+
+            if (isLoggedIn === 'true' && newUsername) {
+                displayName = newUsername
+            } else {
+                // Fallback to legacy system
+                const isGuest = localStorage.getItem('factora_guest') === 'true'
+                const rawUser = localStorage.getItem('factora_user')
+
+                if (isGuest) {
+                    displayName = 'Guest'
+                } else if (rawUser) {
+                    try {
+                        const parsed = JSON.parse(rawUser)
+                        displayName = parsed?.name || 'User'
+                    } catch (_) {
+                        displayName = 'User'
+                    }
+                }
+            }
+
+            // Avatar initials: first character of displayName
+            if (displayName && typeof displayName === 'string' && displayName.trim().length > 0) {
+                initial = displayName.trim().charAt(0).toUpperCase()
+            } else {
+                displayName = 'Guest'
+                initial = 'G'
+            }
+
+            const avatarEl = document.getElementById('user-avatar')
+            const nameEl = document.getElementById('user-badge-name')
+            if (avatarEl) avatarEl.textContent = initial
+            if (nameEl) nameEl.textContent = displayName
+        });
+
+        document.addEventListener('submit', function (e) {
+            e.preventDefault();
+            return false;
         });
     </script>
 </body>

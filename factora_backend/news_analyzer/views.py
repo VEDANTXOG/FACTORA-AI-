@@ -56,6 +56,7 @@ def analyze_news(request):
             reason = f"This is likely fake because:\\n1. {strong_reasons[0]}\\n2. {strong_reasons[1]}\\n3. {strong_reasons[2]}"
 
 
+        reason_parts = []      
         if sources_list:
             reason_parts.append("- Credible sources detected.")
         else:
